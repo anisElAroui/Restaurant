@@ -1,0 +1,47 @@
+<div class="">
+  <div class="media menu-item">
+  <img class="mr-3" src="{{ meal.imagePath}}" class="img-fluid" >
+  <div class="media-body">
+    <h5 class="mt-0">{{meal.name}}</h5>
+    <p>{{meal.description}}</p>
+    <h6 class="text-primary menu-price">${{meal.cost}}</h6>
+    <p class="mb-0"><a data-toggle="modal" data-target="#reservationModal" class="btn btn-primary btn-sm">Order Now</a></p>
+  </div>
+  </div>
+</div>
+
+<div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-12 p-5">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <small>CLOSE </small><span aria-hidden="true">&times;</span>
+            </button>
+            <h1 class="mb-4">Command a meal</h1>
+            <div class="row">
+              <!--<form (ngSubmit)="onAddMeal(f)" #f="ngForm">-->
+            <div class="col-lg-8">
+              <img class="mr-3" src="{{ meal.imagePath}}" class="img-fluid" >
+              <div class="media-body">
+                <h5 class="mt-0">{{meal.name}}</h5>
+                <p>{{meal.description}}</p>
+                <h6 class="text-primary menu-price">${{meal.cost}}</h6>
+              </div>
+            </div>
+            <div class="col-lg-4 form-group">
+              <label for="amount">Amount</label>
+              <input type="number" id="amount" class="form-control" name="amount" ngModel required pattern="^[1-9]+[0-9]*$"><br>
+              <p class="mb-0"><a class="btn btn-primary btn-sm">Add to basket</a></p>
+              <!--<p class="mb-0"><a (click)="onAddMeal()" data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-sm text-center">add to basket</a></p>-->
+            </div>
+              <!--</form>-->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

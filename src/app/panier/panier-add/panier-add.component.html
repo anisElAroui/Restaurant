@@ -1,0 +1,25 @@
+<div class="container">
+<div class="row">
+  <div class="col-md-12">
+    <form>
+      <div class="row">
+        <div class="col-sm-5 form-group">
+          <label>Meal & Amount</label>
+          <ul class="list-group">
+            <a class="list-group-item" *ngFor="let meal of panier">
+              {{ meal.name}}
+              <input type="number" id="amount" class="form-control" name="amount" ngModel required pattern="^[1-9]+[0-9]*$">
+            </a>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="btn btn-success" type="submit" >Buy</button>
+          <button class="btn btn-danger" type="button">Delete</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>

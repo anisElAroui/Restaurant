@@ -1,0 +1,28 @@
+<section class="site-cover" style="background-image: url(./assets/images/bg_3.jpg);" id="section-home">
+  <div class="container">
+    <div class="row align-items-center justify-content-center text-center site-vh-100">
+      <div class="col-md-12">
+        <h1 class="site-heading mb-3">Welcome To Restaurant PX</h1>
+        <h2 class="h5 site-subheading mb-5">Come and eat well with our delicious &amp; healthy foods.</h2>
+
+      </div>
+    </div>
+  </div>
+</section>
+<section class="site-section bg-light" id="section-news">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-12 text-center mb-5 ">
+        <h2 class="display-4">News</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-7">
+            <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <app-dashboard-list *ngFor="let mealElement of meals" [meal]="mealElement" class="col-lg-4 col-md-6 col-sm-6"></app-dashboard-list>
+      </div>
+    </div>
+    </div>
+</section>
